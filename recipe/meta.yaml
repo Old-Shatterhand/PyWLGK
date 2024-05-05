@@ -1,0 +1,22 @@
+package:
+  name: "pywlk"
+  version: "1.0.0"
+
+source:
+  path: ..
+
+build:
+  script: python setup.py install
+
+requirements:
+  build:
+    - python>=3.8
+  run:
+    - python>=3.8
+    - numpy
+
+about:
+  home: https://github.com/Old-Shatterhand/PyWLK
+  license: MIT
+  license_file: LICENSE
+  summary: "Python implementation of the WL kernel to be installable from conda and pip for all major platforms and python versions."

@@ -1,0 +1,34 @@
+name: Publish PyWLK to PyPI
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Mamba
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          python-version: '3.8'
+          miniforge-variant: Mambaforge
+          miniforge-version: latest
+          activate-environment: MPP
+          use-mamba: true
+
+      - name: Install environment
+        shell: bash -l {0}
+        run: |
+          pip install --upgrade build twine
+
+      - name: Publish PyWLK to PyPI
+        env:
+          PYPI_PASSWOR: ${{ secrets.PYPI_PASSWORD }}
+        shell: bash -l {0}
+        run: |
+          python -m build
+          python -m twine upload -u Old-Shatterhand -p "$PYPI_PASSWORD" dist/*
