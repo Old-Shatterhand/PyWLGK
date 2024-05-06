@@ -27,8 +27,8 @@ jobs:
 
       - name: Publish PyWLK to PyPI
         env:
-          PYPI_PASSWOR: ${{ secrets.PYPI_PASSWORD }}
+          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         shell: bash -l {0}
         run: |
           python -m build
-          python -m twine upload -u Old-Shatterhand -p "$PYPI_PASSWORD" dist/*
+          python -m twine upload -u __token__ -p "$PYPI_TOKEN" dist/*
