@@ -1,14 +1,14 @@
-Welcome to the documentation of PyWLK
-=====================================
+Welcome to the documentation of PyWLGK
+======================================
 
-PyWLK is a Python implementation of the Weisfeiler-Lehman Graph Kernels (WLKs). It is based on the paper by ? et al.
-The main improvement over other tools is that PyWLK can be installed from PyPI and Anaconda for any current python
+PyWLGK is a Python implementation of the Weisfeiler-Lehman Graph Kernels (WLKs). It is based on the paper by ? et al.
+The main improvement over other tools is that PyWLGK can be installed from PyPI and Anaconda for any current python
 version, i.e. Python 3.8 and newer.
 
 Installation
 ------------
 
-PyWLK can be installed from PyPI using pip:
+PyWLGK can be installed from PyPI using pip:
 
 .. code-block:: bash
 
@@ -23,7 +23,7 @@ or from Anaconda using conda:
 Usage
 -----
 
-After installation, PyWLK can be used as follows:
+After installation, PyWLGK can be used as follows:
 
 .. code-block:: python
 
@@ -35,7 +35,7 @@ After installation, PyWLK can be used as follows:
     labels = np.ones((2, 10), dtype=np.int32)
     wlk(adjs, labels, k=4)
 
-PyWLK takes as input a stack of adjacency matrices (:code:`adjs`) and a stack of node labels (:code:`labels`). The
+PyWLGK takes as input a stack of adjacency matrices (:code:`adjs`) and a stack of node labels (:code:`labels`). The
 adjacency matrices must be symmetric, whereas the labels can have any type. Additionally, one can specify a :code:`k`
 to control how many iterations of the kernel will be computed.
 

@@ -1,4 +1,4 @@
-name: Publish PyWLK to Conda
+name: Publish PyWLGK to Conda
 
 on:
   release:
@@ -33,19 +33,19 @@ jobs:
       run: |
         conda install -y anaconda-client conda-build git
 
-    - name: Build PyWLK for linux-64
+    - name: Build PyWLGK for linux-64
       shell: bash -l {0}
       run: |
         conda-build -q -c conda-forge -c bioconda --output-folder . --no-test recipe
 
-    - name: Convert PyWLK to osx-64, osx-arm64, win-64
+    - name: Convert PyWLGK to osx-64, osx-arm64, win-64
       shell: bash -l {0}
       run: |
         conda convert -p osx-64 linux-64/*.tar.bz2
         conda convert -p osx-arm64 linux-64/*.tar.bz2
         conda convert -p win-64 linux-64/*.tar.bz2
 
-    - name: Publish PyWLK to Conda
+    - name: Publish PyWLGK to Conda
       env:
         ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}
       shell: bash -l {0}

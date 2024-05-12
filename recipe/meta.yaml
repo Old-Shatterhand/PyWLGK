@@ -16,7 +16,7 @@ requirements:
     - numpy
 
 about:
-  home: https://github.com/Old-Shatterhand/PyWLK
+  home: https://github.com/Old-Shatterhand/PyWLGK
   license: MIT
   license_file: LICENSE
   summary: "Python implementation of the WL kernel to be installable from conda and pip for all major platforms and python versions."

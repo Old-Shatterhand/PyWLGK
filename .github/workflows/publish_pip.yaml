@@ -1,4 +1,4 @@
-name: Publish PyWLK to PyPI
+name: Publish PyWLGK to PyPI
 
 on:
   release:
@@ -25,7 +25,7 @@ jobs:
         run: |
           pip install --upgrade build twine
 
-      - name: Publish PyWLK to PyPI
+      - name: Publish PyWLGK to PyPI
         env:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         shell: bash -l {0}

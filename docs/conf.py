@@ -30,7 +30,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 author = "Roman Joeres"
-project = "PyWLK"
+project = "PyWLGK"
 copyright = f"{datetime.datetime.now().year}, {author}"
 
 version = list(open("../pyproject.toml", "r").readlines())[2].strip().split("\"")[1].split("\"")[0]
