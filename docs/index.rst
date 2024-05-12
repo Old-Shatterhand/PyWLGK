@@ -12,13 +12,13 @@ PyWLK can be installed from PyPI using pip:
 
 .. code-block:: bash
 
-    pip install pywlk
+    pip install pywlgk
 
 or from Anaconda using conda:
 
 .. code-block:: bash
 
-    conda install -c conda-forge pywlk
+    conda install -c conda-forge pywlgk
 
 Usage
 -----
@@ -27,7 +27,7 @@ After installation, PyWLK can be used as follows:
 
 .. code-block:: python
 
-    from pywlk import wlk
+    from pywlgk import wlk
     import numpy as np
 
     adjs = np.random.randint(0, 1, size=(2, 10, 10))

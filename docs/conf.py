@@ -7,7 +7,7 @@ import sphinx_rtd_theme
 
 sys.path.insert(0, os.path.abspath("./.."))
 
-import pywlk
+import pywlgk
 
 extensions = [
     "sphinx.ext.autodoc",
@@ -53,7 +53,7 @@ html_theme_options = {
     "navigation_depth": 2,
 }
 
-rst_context = {"pywlk": pywlk}
+rst_context = {"pywlgk": pywlgk}
 
 add_module_names = False
 fail_on_warning = True

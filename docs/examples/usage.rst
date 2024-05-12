@@ -1,4 +1,4 @@
 Code Documentation
 ==================
 
-.. autofunction:: pywlk.wlk
+.. autofunction:: pywlgk.wlk
